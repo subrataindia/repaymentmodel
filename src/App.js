@@ -1,14 +1,22 @@
 import "./App.css";
 
-import { Footer, Header, Sidebar, MonthlyPayment, Plot } from "./components";
+import {
+  Footer,
+  Header,
+  Sidebar,
+  MonthlyPayment,
+  PlotChart,
+} from "./components";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Sidebar />
-      <MonthlyPayment />
-      <Plot />
+      <div className="mainbody">
+        <Sidebar />
+        <MonthlyPayment />
+        <PlotChart />
+      </div>
       <Footer />
     </div>
   );

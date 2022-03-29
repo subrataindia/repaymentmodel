@@ -5,8 +5,13 @@ import { observer } from "mobx-react-lite";
 
 export const MonthlyPayment = observer(() => {
   let initialBalance = store.getTotalBalance();
-  const handleChange = (e) => {
-    store.setMonthlyPayment(parseInt(e.target.value));
+
+  const handleChangeMonthlyPayment = (e) => {
+    if (e.target.value !== "") {
+      store.setMonthlyPayment(parseInt(e.target.value));
+    } else {
+      store.setMonthlyPayment(0);
+    }
   };
   return (
     <Card
@@ -15,16 +20,17 @@ export const MonthlyPayment = observer(() => {
         padding: 10,
         display: "flex",
         justifyContent: "center",
+        flexDirection: "column",
       }}
       className="main"
     >
-      <div>Initial Balance: {initialBalance}</div>
+      <h3>Initial Balance: {initialBalance}</h3>
       <TextField
         id="monthly-payment"
         label="Monthly Payment: "
         variant="outlined"
         value={store.monthlyPayment}
-        onChange={handleChange}
+        onChange={handleChangeMonthlyPayment}
       />
     </Card>
   );

@@ -1,11 +1,17 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.mainbody {
+  text-align: center;
   display: grid;
   grid-template-areas:
-    "hd hd"
     "sd main"
-    "sd plot"
-    "ft ft";
+    "sd plot";
   grid-template-columns: auto 1fr;
 }
 
@@ -28,15 +34,13 @@
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-  .App {
+  .mainbody {
     text-align: center;
     display: grid;
     grid-template-areas:
-      "hd"
       "sd"
       "main"
-      "plot"
-      "ft";
+      "plot";
     grid-template-columns: 1fr;
   }
 }

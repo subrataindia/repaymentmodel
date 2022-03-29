@@ -1,7 +1,7 @@
 import Footer from "./footer/Footer";
 import { Header } from "./header/Header";
 import { MonthlyPayment } from "./main/MonthlyPayment";
-import { Plot } from "./main/Plot";
+import { PlotChart } from "./main/PlotChart";
 import { Sidebar } from "./sidebar/Sidebar";
 
-export { Sidebar, Header, Footer, MonthlyPayment, Plot };
+export { Sidebar, Header, Footer, MonthlyPayment, PlotChart };
