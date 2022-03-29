@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { TextField, Button, Card } from "@mui/material";
 import { observer } from "mobx-react-lite";
 import { store } from "../../data/store";
-import "./Sidebar.css";
 
 const addAccountBalance = (data) => {
   store.setAccountsData(parseInt(data));
@@ -27,7 +26,7 @@ export const Sidebar = observer(() => {
       className="sidebar"
     >
       <h2>Accounts</h2>
-
+      <p>Count:{store.accountsData.length}</p>
       <TextField
         type={"number"}
         id="enter-balance"
@@ -37,7 +36,7 @@ export const Sidebar = observer(() => {
         onChange={handleChange}
       />
       <Button
-        className="btn"
+        style={{ marginTop: 10, marginBottom: 10 }}
         variant="contained"
         onClick={() => {
           setName(0);
