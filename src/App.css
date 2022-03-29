@@ -18,12 +18,15 @@
 .header {
   grid-area: hd;
 }
+
 .footer {
   grid-area: ft;
 }
+
 .content {
   grid-area: main;
 }
+
 .sidebar {
   grid-area: sd;
 }
