@@ -6,7 +6,7 @@
 ![Screen2](https://github.com/subratsir/repaymentmodel/blob/main/screen2.png)
 
 ## 👋 Author
-- [Subrat Sir](https://github.com/subratsir)
+- [Subrata Das](https://github.com/subratsir)
 
 ## 🤝 Contributing
 
