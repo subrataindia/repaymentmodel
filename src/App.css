@@ -1,38 +1,42 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-areas:
+    "hd hd"
+    "sd main"
+    "sd plot"
+    "ft ft";
+  grid-template-columns: auto 1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  grid-area: hd;
+}
+.footer {
+  grid-area: ft;
+}
+.content {
+  grid-area: main;
+}
+.sidebar {
+  grid-area: sd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.plot {
+  grid-area: plot;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .App {
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+      "hd"
+      "sd"
+      "main"
+      "plot"
+      "ft";
+    grid-template-columns: 1fr;
   }
 }
